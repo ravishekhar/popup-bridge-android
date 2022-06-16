@@ -36,7 +36,7 @@ public class PopupActivity extends AppCompatActivity {
                 new SSLTolerentWebViewClient()
         );
 
-        mPopupBridgeClient = new PopupBridgeClient(this, mWebView, "com.braintreepayments.popupbridgeexample");
+        mPopupBridgeClient = new PopupBridgeClient(this, mWebView, "popup_bridge_scheme");
         mPopupBridgeClient.setErrorListener(error -> showDialog(error.getMessage()));
 
         mWebView.loadUrl(getIntent().getStringExtra("url"));
